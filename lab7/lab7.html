@@ -17,7 +17,7 @@
         <nav>
             <ul class="nav-menu">
               <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
+              <li><a href="#" id="aboutButton">About us</a></li>
               <li class="dropdown">
                 <a href="#">Services</a>
                 <ul class="dropdown-menu">
@@ -51,16 +51,22 @@
               </div>
         </div>
 
-        <h4>“Chewy, chocolate-packed, and melt-in-your-mouth moments await you with Sandro's Gourmet Cookies. Each bite offers a delightful crunch of golden-baked perfection with bursts of decadent chocolate chips. Perfect with a glass of cold milk or enjoyed on its own—an irresistible treat for every occasion!”</h4><hr>
+        <h4>“Chewy, chocolate-packed, and melt-in-your-mouth moments await you with Sandro's Gourmet Cookies. Each bite offers a delightful crunch of golden-baked perfection with bursts of decadent chocolate chips. Perfect with a glass of cold milk or enjoyed on its own—an irresistible treat for every occasion!”</h4><hr><br>
+
+        <div class="products">
+          <h1>Our Products</h1>
+
+          <hr>
+        </div>
 
         <br>
-        <div class="about">
+        <div class="about" id="about">
           <h1>About Sandro's Cookie</h1>
-          <h2>Welcome to Sandro's Cookie, where every bite is a journey of flavors and textures crafted with love and passion! 🍪 At Sandro's Cookie, we believe that a great cookie has the power to bring people together, evoke cherished memories, and create new moments of joy. Founded by Sandro, a baking enthusiast with a dream, our bakery started from humble beginnings, driven by a dedication to quality and innovation.</h2><br><br>
+          <p>Welcome to Sandro's Cookie, where every bite is a journey of flavors and textures crafted with love and passion! 🍪 At Sandro's Cookie, we believe that a great cookie has the power to bring people together, evoke cherished memories, and create new moments of joy. Founded by Sandro, a baking enthusiast with a dream, our bakery started from humble beginnings, driven by a dedication to quality and innovation.</p><br><br>
 
-            <h2>Our mission is simple: to create cookies that are not only delicious but also a treat for all the senses. We source only the finest ingredients, ensuring that each cookie is baked to perfection with a generous dash of creativity and a sprinkle of magic.
+            <p>Our mission is simple: to create cookies that are not only delicious but also a treat for all the senses. We source only the finest ingredients, ensuring that each cookie is baked to perfection with a generous dash of creativity and a sprinkle of magic.</p><br>
             
-            Whether you're savoring our classic chocolate chip, indulging in our unique seasonal flavors, or trying our signature creations, you can be sure that every Sandro's Cookie is made with care and a passion for excellence. Join us in our cookie journey, and let us add a little sweetness to your day! 🌟🍪</h2>
+            <p>Whether you're savoring our classic chocolate chip, indulging in our unique seasonal flavors, or trying our signature creations, you can be sure that every Sandro's Cookie is made with care and a passion for excellence. Join us in our cookie journey, and let us add a little sweetness to your day! 🌟🍪</p>
         </div>
 
 
@@ -134,6 +140,11 @@
       updateCarousel();
     }, 3000);
 
+
+    //for about
+    document.getElementById("aboutButton").addEventListener("click", function() {
+        document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+    });
 
     // for contact container
     let popup = document.getElementById("popup");
